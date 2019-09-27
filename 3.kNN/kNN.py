@@ -1,7 +1,7 @@
 import numpy as np
 from math import sqrt
 from collections import Counter
-
+from metrics import accuracy_score
 # def kNN_classify(k, X_train, y_train, x):
 #
 #     assert 1<=k<=X_train.shape[0],"k必须合法"
@@ -43,6 +43,11 @@ class kNNClassifier:
         topK_y = [self._y_train[i] for i in nearest[:self.k]]
         votes = Counter(topK_y)
         return votes.most_common(1)[0][0]
+
+    def score(self,X_test,y_test):
+        y_predict = self.predict(X_test)
+        return accuracy_score(y_predict,y_test)
+
 
     def __repr__(self):
         return "KNN(k=%d)" %self.k
