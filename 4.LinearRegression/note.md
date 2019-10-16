@@ -37,3 +37,22 @@
 
 ![草图](https://user-images.githubusercontent.com/33116315/66361578-e14e5080-e9b1-11e9-89bd-363109005b58.png)
 
+## 3. 实现
+
+## 4. 向量化
+
+- 对于a的计算方式
+- 可以将循环替换为矩阵乘法
+
+## 5. 回归算法评价
+
+- MSE 均方误差(Mean Squared Error)
+- RMSE 均方根误差(Root Mean Squared Error)
+- MAE 平均绝对误差(Mean Absolute Error)
+
+## 6. R Squared
+
+- R^2 <= 1
+- R^2 越大越好，当我们的预测模型不犯错误时，R^2最大值为1
+- 若R^2 < 0 说明，可能我们的数据不存在线性关系
+- 1 - mse/var  （方差）
